@@ -2,6 +2,20 @@
 
 A server that controls newsletter service of sending emails to subscribers.
 
+## User Story
+
+We are fulfilling these user stories:
+
+* ***As a*** blog **visitor**, ***I want to*** subscribe to the newsletter, ***So that*** I can receive email updates when new content is published on the blog;
+* ***As a*** blog **author**, ***I want to*** send an email to all my subscribers, ***So that*** I can notify then when new content is published;
+* ***As a*** **subscriber**, ***I want to*** be able to unsubscribe from the newsletter, ***So that*** I can stop receiving email updates from the blog.
+
+We are adding features to:
+
+- [ ] - manage multiple newsletters;
+- [ ] - segment subscribers in multiple audiences;
+- [ ] - track opening and click rates.
+
 ## Development
 
 This project uses [Trunk based development](https://cloud.google.com/solutions/devops/devops-tech-trunk-based-development). In trunk-based development we should be able to deploy our main branch at any point in time.
@@ -56,6 +70,8 @@ cargo-watch supports command chaining as well:
 # 2. If it succeeds, it launches cargo test.
 # 3. If tests pass, it launches the application with cargo run.
 cargo watch -x check -x test -x run
+# Or run the bash script
+./dev-watch.sh
 ```
 
 For code coverage, let's install `cargo-tarpaulin`:
