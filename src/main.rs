@@ -1,6 +1,9 @@
 use newsletter_rs::run;
+use std::net::TcpListener;
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
-    run()?.await // expect bind error to bubble on error here
+    let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind random port");
+
+    run(listener)?.await // expect bind error to bubble on error here
 }
