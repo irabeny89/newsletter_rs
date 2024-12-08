@@ -1,5 +1,7 @@
 use std::net::TcpListener;
 
+use newsletter_rs::startup;
+
 const HEALTH_CHECK_PATH: &str = "/health_check";
 const SUBSCRIPTIONS_PATH: &str = "/subscriptions";
 
@@ -8,7 +10,7 @@ fn spawn_app() -> String {
     let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind random port");
     let address = listener.local_addr().unwrap();
 
-    let server = newsletter_rs::run(listener).expect("Failed to bind address");
+    let server = startup::run(listener).expect("Failed to bind address");
     tokio::spawn(server);
 
     // return server address

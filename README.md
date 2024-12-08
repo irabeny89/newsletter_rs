@@ -93,7 +93,7 @@ To migrate changes to the database, we use `sqlx-cli`;
 cargo install --version=0.5.7 sqlx-cli --no-default-features --features postgres
 ```
 
-Once installed then run the migration script in [./scripts/db-migrate.sh](./scripts/db-migrate.sh) from the commad line:
+Once installed then run the migration script in [./scripts/db-migrate.sh](./scripts/db-migrate.sh) from the command line:
 
 > NOTE: ensure that the file is executable if not.
 

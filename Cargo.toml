@@ -12,7 +12,7 @@ path = "src/main.rs"
 name = "newsletter_rs"
 
 [dev-dependencies]
-reqwest = "0.11"
+reqwest = "0.12.9"
 
 [dependencies]
 actix-web = "4"
@@ -21,10 +21,10 @@ serde = { version = "1", features = ["derive"] }
 
 # using table-like toml syntax to avoid a super-long line!
 [dependencies.sqlx]
-version = "0.5.7"
+version = "0.8.2"
 default-features = false
 features = [
-    "runtime-actix-rustls",
+    "tls-rustls",
     "macros",
     "postgres",
     "uuid",
