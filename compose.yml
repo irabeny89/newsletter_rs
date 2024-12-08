@@ -1,0 +1,13 @@
+services:
+  postgres:
+    container_name: newsletter-db
+    image: postgres:14.15-alpine3.20
+    restart: on-failure
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    # volumes:
+    #   - ./pgdata:/var/lib/postgresql/data
