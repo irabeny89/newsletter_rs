@@ -84,3 +84,23 @@ For example:
 # compute code coverage and ignore test functions
 cargo tarpaulin --ignore-tests
 ```
+
+### Database Migrations
+
+To migrate changes to the database, we use `sqlx-cli`;
+
+```bash
+cargo install --version=0.5.7 sqlx-cli --no-default-features --features postgres
+```
+
+Once installed then run the migration script in [./scripts/db-migrate.sh](./scripts/db-migrate.sh) from the commad line:
+
+> NOTE: ensure that the file is executable if not.
+
+```bash
+# eg: generate a file to add the SQL query to create a table on db:
+./scripts/db-migrate.sh add_user_table
+
+# and then run the migration to db:
+./scripts/db-migrate.sh
+```
