@@ -4,9 +4,11 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Irabeny <irabeny89@gmail.com>"]
 
+# you can only have one binary, except in workspace
 [lib]
 path = "src/lib.rs"
 
+# you can have more than one binary
 [[bin]]
 path = "src/main.rs"
 name = "newsletter_rs"
