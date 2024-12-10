@@ -2,8 +2,8 @@ use std::net::TcpListener;
 
 use newsletter_rs::startup;
 
-const HEALTH_CHECK_PATH: &str = "/health_check";
-const SUBSCRIPTIONS_PATH: &str = "/subscriptions";
+const HEALTH_CHECK_PATH: &str = "/api/health_check";
+const SUBSCRIPTIONS_PATH: &str = "/api/subscriptions";
 
 // launch server in the background
 fn spawn_app() -> String {
