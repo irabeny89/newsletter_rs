@@ -2,7 +2,7 @@ services:
   postgres:
     container_name: newsletter-db
     image: postgres:14.15-alpine3.20
-    restart: on-failure
+    restart: unless-stopped
     ports:
       - "${DB_PORT}:${DB_PORT}"
     environment:
